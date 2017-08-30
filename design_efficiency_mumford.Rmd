@@ -8,7 +8,7 @@ output:
     toc: yes
 ---
 
-This document overviews the main point of the lecture and supplies the R code for carrying out an efficiency analysis.  If you want a file with only the R code you can get that [here](https://github.com/jmumford/OnlineBrainIntensive2017/blob/master/design_efficiency_mumford.R).
+This document overviews the main point of the lecture and supplies the R code for carrying out an efficiency analysis.  If you want a file with only the R code you can get that [here](https://github.com/jmumford/nhwEfficiency/blob/master/design_efficiency_mumford.R).
 
 ## Making a single regressor
 The first thing we need to know how to do is generate regressors.  This first example will walk you through that.  It requires the neuRosim library.  If you haven't already installed it, run the line that is commented out to install it first.  You only need to install a package once, but you need to load it using the "library" command in each new R session.

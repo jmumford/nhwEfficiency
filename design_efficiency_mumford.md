@@ -1,7 +1,7 @@
 # Efficiency for fMRI
 Jeanette Mumford  
 
-This document overviews the main point of the lecture and supplies the R code for carrying out an efficiency analysis.  If you want a file with only the R code you can get that [here](https://github.com/jmumford/OnlineBrainIntensive2017/blob/master/design_efficiency_mumford.R).
+This document overviews the main point of the lecture and supplies the R code for carrying out an efficiency analysis.  If you want a file with only the R code you can get that [here](https://github.com/jmumford/nhwEfficiency/blob/master/design_efficiency_mumford.R).
 
 ## Making a single regressor
 The first thing we need to know how to do is generate regressors.  This first example will walk you through that.  It requires the neuRosim library.  If you haven't already installed it, run the line that is commented out to install it first.  You only need to install a package once, but you need to load it using the "library" command in each new R session.
@@ -111,7 +111,7 @@ con = c(0, 1, -1) # faces-houses -> faces > houses
 
 ```
 ##          [,1]
-## [1,] 15.70957
+## [1,] 19.14464
 ```
 Of course the efficiency value by itself is meaningless, but we can use it to rank a bunch of designs.  We'll use a for loop to generate 10 designs.  Basically all the code from above is copy and pasted into a loop.  
 
@@ -187,7 +187,7 @@ diag(solve(cor(des.mat[,2:3])))
 
 ```
 ##       C1       C1 
-## 3.037524 3.037524
+## 3.767322 3.767322
 ```
 The VIFs are identical in this case because there are only 2 regressors in the model.  Both are less than 5, so this is a good design!
 
@@ -227,7 +227,7 @@ min(rand.trunc.exp)
 ```
 
 ```
-## [1] 2.007486
+## [1] 2.004529
 ```
 
 ```r
@@ -236,7 +236,7 @@ max(rand.trunc.exp)
 ```
 
 ```
-## [1] 5.256349
+## [1] 5.382772
 ```
 
 Of course you can also try different designs such as a stimulus followed by a response cue.  How does jittering the fixation between stimulus and cue increase the efficiency for estimating the cue vs baseline effect?
